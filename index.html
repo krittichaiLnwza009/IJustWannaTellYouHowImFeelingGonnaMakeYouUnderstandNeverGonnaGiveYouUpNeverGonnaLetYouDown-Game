@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click to Win 1,000,000 Robux!!!</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky Click Game</title>
 
-        body {
-            background: radial-gradient(circle, #1a1a2e, #0f0f1a);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            color: #fff;
-        }
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        /* หน้าแรกก่อนโดนแกง */
-        .lobby {
-            text-align: center;
-            padding
+.container{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#ffcc00;
+    color:black;
+    font-weight:bold;
+}
+
+#score{
+    font-size:32px;
+    margin:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎮 Lucky Click Game</h1>
+    <p>กดให้ได้ 100 คะแนนเพื่อรับรางวัลลับ!</p>
+
+    <div id="score">0</div>
+
+    <button onclick="playGame()">กดเลย!</button>
+</div>
+
+<script>
+let score = 0;
+
+function playGame(){
+    score += Math.floor(Math.random() * 20) + 1;
+    document.getElementById("score").innerText = score;
+
+    if(score >= 100){
+        window.location.href =
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
+}
+</script>
+
+</body>
+</html>
