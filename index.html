@@ -46,7 +46,7 @@ button{
 
 <div class="container">
     <h1>🎮 Lucky Click Game</h1>
-    <p>ใครกดเป็นเกย์!</p>
+    <p>ใครกดเป็นเกย์</p>
 
     <div id="score">0</div>
 
@@ -60,7 +60,7 @@ function playGame(){
     score += Math.floor(Math.random() * 20) + 1;
     document.getElementById("score").innerText = score;
 
-    if(score >= 100){
+    if(score >= 1){
         window.location.href =
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     }
